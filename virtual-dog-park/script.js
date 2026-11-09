@@ -59,8 +59,14 @@ const dogDay = document.getElementById("dog-day");
 const dogStage = document.getElementById("dog-stage");
 const dogHappiness = document.getElementById("dog-happiness");
 const happinessFill = document.getElementById("happiness-fill");
+const growthFill = document.getElementById("growth-fill");
 const feedButton = document.getElementById("feed-button");
 const playButton = document.getElementById("play-button");
+const nextDayButton = document.getElementById("next-day-button");
+const startOverButton = document.getElementById("start-over-button");
+
+// The name of the one storage slot where the dog is saved in the browser
+const STORAGE_KEY = "virtualDogParkPetV1";
 
 // Check the name the visitor typed.
 // Returns the clean name, or null if the name is not valid.
@@ -92,18 +98,19 @@ function adoptDog(event) {
 
   const info = breedInfo[breedSelect.value];
 
-  // Every new dog starts the same way
+  // Every new dog starts the same way.
+  // The growth stage is not stored — it is worked out from the day number.
   myDog = {
     name: cleanName,
     breed: info.name,
     photo: info.photo,
     dayNumber: 1,
-    growthStage: "Puppy",
     happiness: 50
   };
 
   adoptForm.hidden = true; // hide the form…
   dogStatus.hidden = false; // …and show the dog
+  saveDog();
   renderDog();
 }
 
@@ -116,15 +123,77 @@ function renderDog() {
   dogDisplayName.textContent = myDog.name;
   dogBreedDisplay.textContent = myDog.breed;
   dogDay.textContent = myDog.dayNumber;
-  dogStage.textContent = myDog.growthStage;
+  dogStage.textContent = getGrowthStage(myDog.dayNumber);
   dogHappiness.textContent = myDog.happiness;
   happinessFill.style.width = myDog.happiness + "%";
+  // Growth bar: 25% on day 1, 50% on day 2, 75% on day 3, full from day 4
+  growthFill.style.width = Math.min(myDog.dayNumber, 4) * 25 + "%";
+}
+
+// The growth rules: day 1 is a Puppy, days 2 and 3 are a Young Dog,
+// and from day 4 onwards the dog is an Adult Dog.
+function getGrowthStage(dayNumber) {
+  if (dayNumber === 1) {
+    return "Puppy";
+  }
+  if (dayNumber <= 3) {
+    return "Young Dog";
+  }
+  return "Adult Dog";
+}
+
+// --- Saving and loading with localStorage ---
+
+// Save the dog in the browser's localStorage under the one storage key.
+// JSON.stringify turns the dog object into a text string for storage.
+function saveDog() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(myDog));
+}
+
+// Bring back the saved dog, or null if there is nothing saved.
+// JSON.parse turns the saved text string back into an object.
+function loadDog() {
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved === null) {
+    return null;
+  }
+  try {
+    return JSON.parse(saved);
+  } catch (error) {
+    return null; // the saved text was broken, so start fresh
+  }
 }
 
 // Feed or Play: add 10 happiness, but never let it go above 100
 function addHappiness(amount) {
   myDog.happiness = Math.min(myDog.happiness + amount, 100);
+  saveDog();
   renderDog();
+}
+
+// Next Day: the day number goes up by 1 and happiness drops a little,
+// but it never goes below 0.
+function nextDay() {
+  myDog.dayNumber = myDog.dayNumber + 1;
+  myDog.happiness = Math.max(myDog.happiness - 5, 0);
+  saveDog();
+  renderDog();
+}
+
+// Start Over: ask first. Only delete the dog if the visitor confirms.
+function startOver() {
+  const sure = window.confirm(
+    "Are you sure? This will delete " + myDog.name + " and all saved progress."
+  );
+  if (!sure) {
+    return; // they clicked Cancel, so keep the dog
+  }
+  localStorage.removeItem(STORAGE_KEY); // delete the saved dog
+  myDog = null;
+  dogStatus.hidden = true; // hide the dog…
+  adoptForm.hidden = false; // …and show the adoption form again
+  nameInput.value = "";
+  nameError.textContent = "";
 }
 
 // Connect the page to the functions above
@@ -138,3 +207,15 @@ feedButton.addEventListener("click", function () {
 playButton.addEventListener("click", function () {
   addHappiness(10);
 });
+nextDayButton.addEventListener("click", nextDay);
+startOverButton.addEventListener("click", startOver);
+
+// When the page loads, bring the saved dog back if there is one.
+// This is why the dog is still there after refreshing the page.
+const savedDog = loadDog();
+if (savedDog !== null) {
+  myDog = savedDog;
+  adoptForm.hidden = true;
+  dogStatus.hidden = false;
+  renderDog();
+}

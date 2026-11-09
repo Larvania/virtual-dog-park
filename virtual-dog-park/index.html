@@ -58,12 +58,19 @@
           <li>Growth stage: <span id="dog-stage"></span></li>
           <li>Happiness: <span id="dog-happiness" aria-live="polite"></span> / 100</li>
         </ul>
-        <div class="happiness-track">
+        <p class="bar-label">Growth</p>
+        <div class="bar-track" aria-hidden="true">
+          <div class="growth-fill" id="growth-fill"></div>
+        </div>
+        <p class="bar-label">Happiness</p>
+        <div class="bar-track" aria-hidden="true">
           <div class="happiness-fill" id="happiness-fill"></div>
         </div>
         <div class="dog-actions">
           <button type="button" id="feed-button" class="park-button">Feed</button>
           <button type="button" id="play-button" class="park-button">Play</button>
+          <button type="button" id="next-day-button" class="park-button">Next Day</button>
+          <button type="button" id="start-over-button" class="park-button">Start Over</button>
         </div>
       </div>
     </section>
