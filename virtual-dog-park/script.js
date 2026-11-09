@@ -3,7 +3,8 @@
 // Small features:
 //   1. A button that shows a random dog greeting.
 //   2. The current year in the footer.
-//   3. My Virtual Dog: adopt a dog, feed it and play with it.
+//   3. My Virtual Dog: adopt a dog and care for it day by day
+//      (progress is saved in the browser with localStorage).
 // ============================================================
 
 // ---------- 1. Random greeting button ----------
