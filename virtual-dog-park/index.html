@@ -23,8 +23,49 @@
         In the encyclopedia below you will learn how big they are, what kind of
         personalities they have, and what it takes to care for them every day.
       </p>
-      <button id="hello-button" type="button">Say hello to the dogs</button>
+      <button id="hello-button" class="park-button" type="button">Say hello to the dogs</button>
       <p id="greeting" class="greeting" aria-live="polite"></p>
+    </section>
+
+    <!-- My Virtual Dog: adopt a dog and take care of it -->
+    <section class="my-dog" id="my-dog">
+      <h2>My Virtual Dog</h2>
+      <p class="section-intro">Adopt your own dog, give it a name, and keep it happy!</p>
+
+      <form id="adopt-form">
+        <p class="form-row">
+          <label for="dog-breed">Choose a breed</label>
+          <select id="dog-breed">
+            <option value="beagle">Beagle</option>
+            <option value="golden">Golden Retriever</option>
+            <option value="poodle">Poodle</option>
+          </select>
+        </p>
+        <p class="form-row">
+          <label for="dog-name">Name your dog (up to 20 characters)</label>
+          <input type="text" id="dog-name" maxlength="20" placeholder="for example: Buddy">
+          <span id="name-error" class="error-message" aria-live="polite"></span>
+        </p>
+        <button type="submit" class="park-button">Adopt</button>
+      </form>
+
+      <div id="dog-status" class="dog-card status-card" hidden>
+        <img id="dog-photo" src="assets/beagle.svg" alt="Illustration of a Beagle." width="400" height="300">
+        <h3 id="dog-display-name"></h3>
+        <ul class="dog-stats">
+          <li>Breed: <span id="dog-breed-display"></span></li>
+          <li>Day number: <span id="dog-day"></span></li>
+          <li>Growth stage: <span id="dog-stage"></span></li>
+          <li>Happiness: <span id="dog-happiness" aria-live="polite"></span> / 100</li>
+        </ul>
+        <div class="happiness-track">
+          <div class="happiness-fill" id="happiness-fill"></div>
+        </div>
+        <div class="dog-actions">
+          <button type="button" id="feed-button" class="park-button">Feed</button>
+          <button type="button" id="play-button" class="park-button">Play</button>
+        </div>
+      </div>
     </section>
 
     <!-- Dog Encyclopedia -->
