@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="poodle-title poodle-desc">
+  <title id="poodle-title">Poodle illustration</title>
+  <desc id="poodle-desc">A simple cartoon apricot poodle with a fluffy coat, a topknot and pom-poms on its legs and tail.</desc>
+
+  <!-- Grass under the dog -->
+  <ellipse cx="200" cy="262" rx="150" ry="20" fill="#CBE6B8"/>
+  <path d="M70 254 q5 -14 10 0 q5 -14 10 0" fill="none" stroke="#8FBF6F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M320 248 q5 -14 10 0 q5 -14 10 0" fill="none" stroke="#8FBF6F" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Tail: thin, with a round pom-pom on top -->
+  <path d="M280 150 Q 315 122 316 94" fill="none" stroke="#D99763" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="316" cy="90" r="15" fill="#F2B78C" stroke="#5B4636" stroke-width="3"/>
+
+  <!-- Shaved legs (far legs are darker) -->
+  <rect x="250" y="205" width="12" height="52" rx="6" fill="#D99763" stroke="#5B4636" stroke-width="3"/>
+  <rect x="148" y="205" width="12" height="52" rx="6" fill="#D99763" stroke="#5B4636" stroke-width="3"/>
+  <rect x="232" y="205" width="12" height="52" rx="6" fill="#EFAF83" stroke="#5B4636" stroke-width="3"/>
+  <rect x="130" y="205" width="12" height="52" rx="6" fill="#EFAF83" stroke="#5B4636" stroke-width="3"/>
+  <!-- Pom-poms on the ankles -->
+  <circle cx="256" cy="224" r="13" fill="#E9A274" stroke="#5B4636" stroke-width="3"/>
+  <circle cx="154" cy="222" r="13" fill="#E9A274" stroke="#5B4636" stroke-width="3"/>
+  <circle cx="238" cy="226" r="13" fill="#F2B78C" stroke="#5B4636" stroke-width="3"/>
+  <circle cx="136" cy="224" r="13" fill="#F2B78C" stroke="#5B4636" stroke-width="3"/>
+
+  <!-- Fluffy jacket: a cluster of circles for the curly clip -->
+  <circle cx="170" cy="160" r="26" fill="#F2B78C" stroke="#5B4636" stroke-width="3"/>
+  <circle cx="250" cy="165" r="28" fill="#F2B78C" stroke="#5B4636" stroke-width="3"/>
+  <circle cx="245" cy="200" r="36" fill="#F2B78C" stroke="#5B4636" stroke-width="3"/>
+  <circle cx="175" cy="198" r="32" fill="#F2B78C" stroke="#5B4636" stroke-width="3"/>
+  <circle cx="212" cy="182" r="55" fill="#F2B78C" stroke="#5B4636" stroke-width="3"/>
+  <circle cx="152" cy="152" r="22" fill="#F2B78C" stroke="#5B4636" stroke-width="3"/>
+
+  <!-- Ear: long and groomed -->
+  <ellipse cx="94" cy="148" rx="14" ry="30" fill="#E9A274" stroke="#5B4636" stroke-width="3" transform="rotate(-8 94 148)"/>
+
+  <!-- Head with a long muzzle -->
+  <circle cx="112" cy="120" r="34" fill="#F2B78C" stroke="#5B4636" stroke-width="3"/>
+  <rect x="66" y="112" width="38" height="17" rx="8.5" fill="#F2B78C" stroke="#5B4636" stroke-width="3"/>
+  <circle cx="70" cy="120" r="6" fill="#4A3728"/>
+  <path d="M74 132 Q 84 138 96 132" fill="none" stroke="#4A3728" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="108" cy="110" r="5.5" fill="#4A3728"/>
+  <circle cx="110" cy="108" r="2" fill="#FFFFFF"/>
+
+  <!-- Topknot: the poodle's famous hair bun -->
+  <circle cx="116" cy="84" r="22" fill="#F2B78C" stroke="#5B4636" stroke-width="3"/>
+  <circle cx="128" cy="68" r="12" fill="#F2B78C" stroke="#5B4636" stroke-width="3"/>
+
+  <!-- Collar with a tag -->
+  <path d="M86 152 Q 112 168 146 156" fill="none" stroke="#7B5EA7" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="114" cy="164" r="6" fill="#F2C14E" stroke="#5B4636" stroke-width="2"/>
+</svg>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Dog Park</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>🐾 Virtual Dog Park</h1>
+    <p class="tagline">A friendly corner of the internet for dog lovers</p>
+  </header>
+
+  <main class="page">
+
+    <!-- Welcome message -->
+    <section class="welcome">
+      <h2>Welcome to the Park!</h2>
+      <p>
+        Take a stroll through our virtual park and meet three wonderful dogs.
+        In the encyclopedia below you will learn how big they are, what kind of
+        personalities they have, and what it takes to care for them every day.
+      </p>
+      <button id="hello-button" type="button">Say hello to the dogs</button>
+      <p id="greeting" class="greeting" aria-live="polite"></p>
+    </section>
+
+    <!-- Dog Encyclopedia -->
+    <section class="encyclopedia">
+      <h2>Dog Encyclopedia</h2>
+      <p class="section-intro">Three breeds, three very different dogs. Which one is your favourite?</p>
+
+      <div class="dog-grid">
+
+        <article class="dog-card">
+          <img src="assets/beagle.svg" alt="Illustration of a Beagle." width="400" height="300">
+          <h3>Beagle</h3>
+          <p><strong>Size:</strong> Small to medium, about 30–40 cm tall at the shoulder.</p>
+          <p><strong>Personality:</strong> Curious, cheerful and famously nosy — beagles follow their nose everywhere.</p>
+          <p><strong>Everyday care:</strong> Needs a good daily walk, regular ear checks and plenty of playtime to stay happy.</p>
+        </article>
+
+        <article class="dog-card">
+          <img src="assets/golden-retriever.svg" alt="Illustration of a Golden Retriever." width="400" height="300">
+          <h3>Golden Retriever</h3>
+          <p><strong>Size:</strong> Large, about 55–65 cm tall at the shoulder.</p>
+          <p><strong>Personality:</strong> Gentle, patient and eager to please — a wonderful friend for the whole family.</p>
+          <p><strong>Everyday care:</strong> Needs brushing a few times a week, long walks and lots of time with people.</p>
+        </article>
+
+        <article class="dog-card">
+          <img src="assets/poodle.svg" alt="Illustration of a Poodle." width="400" height="300">
+          <h3>Poodle</h3>
+          <p><strong>Size:</strong> Comes in three sizes — toy, miniature and standard.</p>
+          <p><strong>Personality:</strong> Smart, proud and playful — poodles learn new tricks faster than almost any breed.</p>
+          <p><strong>Everyday care:</strong> Needs regular grooming for its curly coat and brain games to stay sharp.</p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with plain HTML, CSS and JavaScript · Virtual Dog Park · <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

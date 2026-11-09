@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="golden-title golden-desc">
+  <title id="golden-title">Golden Retriever illustration</title>
+  <desc id="golden-desc">A simple cartoon golden retriever with thick golden fur and a big wagging tail.</desc>
+
+  <!-- Grass under the dog -->
+  <ellipse cx="200" cy="262" rx="150" ry="20" fill="#CBE6B8"/>
+  <path d="M66 254 q5 -14 10 0 q5 -14 10 0" fill="none" stroke="#8FBF6F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M316 250 q5 -14 10 0 q5 -14 10 0" fill="none" stroke="#8FBF6F" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Tail: thick and bushy, wagging up -->
+  <path d="M292 172 Q 345 152 352 104" fill="none" stroke="#E7A94E" stroke-width="24" stroke-linecap="round"/>
+  <path d="M292 172 Q 345 152 352 104" fill="none" stroke="#F3C880" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Legs (far legs are darker) -->
+  <rect x="252" y="198" width="22" height="58" rx="11" fill="#D69436" stroke="#5B4636" stroke-width="3"/>
+  <rect x="226" y="198" width="22" height="58" rx="11" fill="#E7A94E" stroke="#5B4636" stroke-width="3"/>
+  <rect x="124" y="198" width="22" height="58" rx="11" fill="#D69436" stroke="#5B4636" stroke-width="3"/>
+  <rect x="150" y="198" width="22" height="58" rx="11" fill="#E7A94E" stroke="#5B4636" stroke-width="3"/>
+
+  <!-- Body -->
+  <ellipse cx="210" cy="185" rx="90" ry="52" fill="#E7A94E" stroke="#5B4636" stroke-width="3"/>
+  <!-- Soft lighter chest -->
+  <ellipse cx="160" cy="205" rx="30" ry="26" fill="#F3C880"/>
+
+  <!-- Far ear -->
+  <ellipse cx="132" cy="140" rx="13" ry="34" fill="#D69436" stroke="#5B4636" stroke-width="3" transform="rotate(18 132 140)"/>
+
+  <!-- Head -->
+  <circle cx="110" cy="132" r="40" fill="#E7A94E" stroke="#5B4636" stroke-width="3"/>
+  <circle cx="104" cy="118" r="6" fill="#4A3728"/>
+  <circle cx="106" cy="116" r="2" fill="#FFFFFF"/>
+
+  <!-- Muzzle with a happy open mouth -->
+  <ellipse cx="82" cy="152" rx="25" ry="18" fill="#F3C880" stroke="#5B4636" stroke-width="3"/>
+  <circle cx="64" cy="148" r="8" fill="#4A3728"/>
+  <path d="M68 166 Q 84 176 102 166" fill="none" stroke="#4A3728" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="85" cy="176" rx="8" ry="6" fill="#E8837B"/>
+
+  <!-- Near ear: floppy -->
+  <ellipse cx="138" cy="148" rx="16" ry="38" fill="#D69436" stroke="#5B4636" stroke-width="3" transform="rotate(16 138 148)"/>
+
+  <!-- Collar with a tag -->
+  <path d="M84 170 Q 114 188 150 174" fill="none" stroke="#4E8A5A" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="116" cy="186" r="6" fill="#F2C14E" stroke="#5B4636" stroke-width="2"/>
+</svg>

@@ -1,0 +1,157 @@
+/* ============================================================
+   Virtual Dog Park — style.css
+   Plain CSS: variables for colors, a centered page, and a
+   responsive card grid that works on phones and laptops.
+   ============================================================ */
+
+/* Colors used across the whole page (change these to restyle) */
+:root {
+  --green-dark: #2f6b3c;
+  --green-light: #e7f2e3;
+  --cream: #faf6ee;
+  --brown: #5b4636;
+  --orange: #e08e45;
+  --white: #ffffff;
+}
+
+/* ---------- Basic page setup ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--brown);
+  background-color: var(--cream);
+  line-height: 1.6; /* comfortable spacing between lines */
+}
+
+/* Every section sits in a centered column with a max width */
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* ---------- Headings ---------- */
+
+h1,
+h2,
+h3 {
+  font-family: Verdana, Arial, sans-serif;
+  line-height: 1.3;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  margin: 0.5rem 0;
+  font-size: 1.15rem;
+  color: var(--green-dark);
+}
+
+/* ---------- Header and footer ---------- */
+
+.site-header {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--green-dark);
+}
+
+.tagline {
+  margin: 0.5rem 0 0;
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+.site-footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: var(--green-light);
+}
+
+/* ---------- Welcome section ---------- */
+
+.welcome {
+  padding: 0.5rem 0;
+}
+
+/* ---------- Dog Encyclopedia cards ---------- */
+
+.section-intro {
+  margin-top: -0.5rem;
+}
+
+/* The grid changes from 3 columns on a laptop to 1 on a phone
+   all by itself, because each column never gets smaller than 280px. */
+.dog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.dog-card {
+  padding: 1rem 1.25rem 1.25rem;
+  background-color: var(--white);
+  border: 2px solid var(--green-light);
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dog-card img {
+  width: 100%;
+  height: auto; /* keeps the SVG's shape while it grows and shrinks */
+  border-radius: 8px;
+  background-color: var(--green-light);
+}
+
+/* ---------- Button and greeting ---------- */
+
+#hello-button {
+  padding: 0.6rem 1.2rem;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--orange);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#hello-button:hover {
+  background-color: var(--green-dark);
+}
+
+.greeting {
+  min-height: 1.6em; /* stops the page jumping when the text appears */
+  font-style: italic;
+  color: var(--green-dark);
+  font-weight: bold;
+}
+
+/* ---------- Phone screens (480px wide or less) ---------- */
+
+@media (max-width: 480px) {
+  .page {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .site-header {
+    padding: 1.5rem 1rem;
+  }
+}

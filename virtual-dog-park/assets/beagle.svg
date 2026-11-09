@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="beagle-title beagle-desc">
+  <title id="beagle-title">Beagle illustration</title>
+  <desc id="beagle-desc">A simple cartoon beagle with white, brown and black fur standing on grass.</desc>
+
+  <!-- Grass under the dog -->
+  <ellipse cx="200" cy="262" rx="150" ry="20" fill="#CBE6B8"/>
+  <path d="M70 254 q5 -14 10 0 q5 -14 10 0" fill="none" stroke="#8FBF6F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M318 248 q5 -14 10 0 q5 -14 10 0" fill="none" stroke="#8FBF6F" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Tail: white, held upright (dark outline first, white on top) -->
+  <path d="M285 168 Q 330 148 326 104" fill="none" stroke="#5B4636" stroke-width="22" stroke-linecap="round"/>
+  <path d="M285 168 Q 330 148 326 104" fill="none" stroke="#F7F2E9" stroke-width="15" stroke-linecap="round"/>
+  <circle cx="326" cy="100" r="10" fill="#B5722F" stroke="#5B4636" stroke-width="3"/>
+
+  <!-- Legs (far legs are darker) -->
+  <rect x="222" y="195" width="22" height="62" rx="11" fill="#EFE7DA" stroke="#5B4636" stroke-width="3"/>
+  <rect x="248" y="195" width="22" height="62" rx="11" fill="#F7F2E9" stroke="#5B4636" stroke-width="3"/>
+  <rect x="126" y="195" width="22" height="62" rx="11" fill="#EFE7DA" stroke="#5B4636" stroke-width="3"/>
+  <rect x="150" y="195" width="22" height="62" rx="11" fill="#F7F2E9" stroke="#5B4636" stroke-width="3"/>
+
+  <!-- Body: white with a black saddle patch on the back -->
+  <ellipse cx="205" cy="180" rx="88" ry="50" fill="#F7F2E9" stroke="#5B4636" stroke-width="3"/>
+  <path d="M128 172 Q 205 112 284 172 Q 205 148 128 172 Z" fill="#3B3B3B"/>
+
+  <!-- Far ear -->
+  <ellipse cx="136" cy="160" rx="12" ry="30" fill="#9C5F26" stroke="#5B4636" stroke-width="3" transform="rotate(24 136 160)"/>
+
+  <!-- Head -->
+  <circle cx="112" cy="128" r="38" fill="#F7F2E9" stroke="#5B4636" stroke-width="3"/>
+  <!-- Brown patch around the eye -->
+  <ellipse cx="120" cy="114" rx="16" ry="14" fill="#B5722F"/>
+  <circle cx="119" cy="116" r="5.5" fill="#2F2A26"/>
+
+  <!-- Muzzle and nose -->
+  <ellipse cx="88" cy="148" rx="24" ry="17" fill="#F7F2E9" stroke="#5B4636" stroke-width="3"/>
+  <ellipse cx="68" cy="142" rx="9" ry="7" fill="#3B3B3B"/>
+  <path d="M74 156 Q 86 164 100 156" fill="none" stroke="#5B4636" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Near ear: long and floppy -->
+  <ellipse cx="140" cy="155" rx="14" ry="36" fill="#B5722F" stroke="#5B4636" stroke-width="3" transform="rotate(20 140 155)"/>
+
+  <!-- Collar with a tag -->
+  <path d="M88 168 Q 118 186 152 172" fill="none" stroke="#D9534F" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="118" cy="184" r="6" fill="#F2C14E" stroke="#5B4636" stroke-width="2"/>
+</svg>
